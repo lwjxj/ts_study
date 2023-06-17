@@ -1,9 +1,10 @@
 <script lang="ts">
 // unknown适合于从接口获取数据，暂时不知道什么类型的值，通过类型断言去使用
+// unknown类型可以收窄到任何类型，unknown是任何类型的联合
 const u: unknown = 1
 const u2 = (u as number).toFixed(1)
-// never 相当于空集
 
+// never 相当于空集
 function fail(msg: string): never {
     throw new Error(msg)
 }
