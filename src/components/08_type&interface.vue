@@ -37,6 +37,7 @@ d10.x = 1
 // 1. type 可以描述基本类型和对象，而interface 只能描述对象
 // 2. type 只是类型别名，interface 是类型声明
 // 3. type 不能重新赋值，扩展性较差，interface 有一个自动合并的功能
+// 4. 遇到属性冲突的时候，interface 会直接报错，而type会显示never
 type T = string
 type T2 = T
 

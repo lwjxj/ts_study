@@ -26,4 +26,15 @@ const x:Person1 = {
     sayHi
 }
 x.sayHi('jack')
+
+
+// 函数声明
+function add(x:number,y:number):number {
+    return x+y
+}
+
+// 函数表达式
+const add2 = function(x:number,y:number):number {
+    return x+y
+}
 </script>
