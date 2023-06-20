@@ -1,5 +1,6 @@
 <script lang="ts">
-const arr: Array<number> = [1, 2]
+const arr1:number[] = [1,2]
+const arr2: Array<number> = [1, 2]
 
 type A0 = string[]
 const a0: A0 = ['h']
