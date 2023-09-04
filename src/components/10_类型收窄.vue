@@ -69,5 +69,15 @@ const f14 = (a: string | number | Shape) => {
 }
 
 // 7.断言 as
+const arrayNumber:number[] = [1,2,3,4]
+const greaterThan2:number = arrayNumber.find(num => num > 2)
+const greaterThan3:number = arrayNumber.find(num => num > 3) as number
 
+// 语法
+// 1. 尖括号 会与react中jsx产生语法冲突，不推荐
+let someValue:any = 'this is a string'
+let strLength:number = (<string>someValue).length
+
+// as 语法
+let strLength2:number = (someValue as string).length
 </script>
