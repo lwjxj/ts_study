@@ -55,5 +55,31 @@ console.log(y);
 x = y
 
 // 成员数量的推断
+function f(point: [number, number]) {
+    if (point.length === 3) {
+        console.log(point.length);
+    }
+}
+f([1, 2])
+
+function f2(point: [number, number?, number?]) {
+    if (point.length === 4) {
+        console.log(point.length);
+    }
+}
+f2([1])
+
+// 使用扩展运算符，TS就无法推断出成员数量(TS把myTuple当做数组看待，而数组的成员数量是不确定的)
+const myTuple: [...string[]] = ['a', 'b', 'c']
+if (myTuple.length === 4) {
+
+}
+
 // 扩展运算符和成员数量
+// const arr: [number, number] = [1, 2]
+const arr = [1, 2] as const // == readonly [1,2] 只读 可以当作数组，也可以当作元祖
+function add(x: number, y: number) {
+    console.log(x, y);
+}
+add(...arr)
 </script>
