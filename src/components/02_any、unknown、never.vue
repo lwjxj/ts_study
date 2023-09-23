@@ -18,7 +18,7 @@ let x2:any = 'zs'
 let y2:number;
 y2 = x2
 console.log(y2)
-y2.toFixed(2)
+// y2.toFixed(2)
 
 // 2.unknown
 // 与any相同之处：大部分类型的值都可以赋值给unknown类型
@@ -51,8 +51,10 @@ let x6:never
 let x7:string = x6
 // console.log(x6)
 function f():never {
-    throw new Error('出错了')
+    // throw new Error('出错了')
 }
 let x8:number = f()
 console.log(x8)
 </script>
+
+<template></template>

@@ -27,7 +27,7 @@ const arr6: readonly number[] = [1, 2]
 getSum(arr6 as number[])
 
 // 4.readonly关键字不能和数组的泛型写法一起使用
-const arr7: readonly Array<number> = [1, 2]
+// const arr7: readonly Array<number> = [1, 2]
 
 const arr8: ReadonlyArray<number> = [1, 2]
 console.log(arr8);
@@ -41,3 +41,7 @@ const multi: number[][] = [[1, 2, 3], [1, 2, 3]]
 console.log(multi);
 
 </script>
+
+<template>
+
+</template>

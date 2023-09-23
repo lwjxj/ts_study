@@ -83,3 +83,7 @@ function add(x: number, y: number) {
 }
 add(...arr)
 </script>
+
+<template>
+
+</template>
