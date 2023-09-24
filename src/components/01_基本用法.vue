@@ -1,5 +1,5 @@
 <script setup lang="ts">
-let x:string
+let x: string
 console.log(x)
 
 // 类型推断
@@ -11,10 +11,6 @@ console.log(x)
 // 编译过程其实就是将类型全部删除
 </script>
 
-<template>
+<template></template>
 
-</template>
-
-<style scoped lang="less">
-
-</style>
+<style scoped lang="less"></style>

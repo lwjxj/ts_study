@@ -55,82 +55,78 @@ console.log(obj4.foo)
 
 // 4. null undefined
 // 4.1 总之，打开strictNullChecks以后，undefined和null只能赋值给自身，或者any类型和unknown类型的变量。
-let x4: never;
+let x4: never
 x4 = null
 console.log(x4)
-let x5: number;
+let x5: number
 x5 = null
 console.log(x5)
 let x6: any = null
-console.log(x6);
+console.log(x6)
 let x7: unknown = undefined
-console.log(x7);
+console.log(x7)
 
 // 5. 值类型
 // 5.1 TypeScript 推断类型时，遇到const命令声明的变量，如果代码里面没有注明类型，就会推断该变量是值类型。
 const x8 = '123' // type '123' 因为const命令声明的变量，一旦声明就不能改变，相当于常量
-console.log(x8);
+console.log(x8)
 const x9: string = '123' // type string
-console.log(x9);
+console.log(x9)
 const x10 = { foo: 1 } // type { foo: number } const变量赋值为对象时，属性值是可以改变的
-console.log(x10);
+console.log(x10)
 
 // 6.联合类型
 let c1: string | number = 123
-console.log(c1);
+console.log(c1)
 // 6.1 使用联合类型，需要对类型进行收窄
 
 // 7.交叉类型
-let c2: string & number;
-console.log(c2);
+let c2: string & number
+console.log(c2)
 let c3: { foo: string } & { bar: number }
 c3 = {
-    foo: '123',
-    bar: 123
+  foo: '123',
+  bar: 123,
 }
-console.log(c3);
+console.log(c3)
 // 7.1 交叉类型常常用来为对象类型添加新属性
 type A = {
-    foo: number
+  foo: number
 }
 type B = A & {
-    bar: string
+  bar: string
 }
-let c4: B;
-console.log(c4);
+let c4: B
+console.log(c4)
 
 // 8. type 用来定义类型别名
 type Age = number
 let age: Age = 30
-console.log(age);
+console.log(age)
 // 8.1 别名可以让类型的名字变得更有意义，也能增加代码的可读性，还可以使复杂类型用起来更方便，便于以后修改变量的类型。
 // 8.2 别名不允许重名
 // 8.3 别名的作用域是块级作用域，代码块内部定义的别名不会影响到外部定义的别名
 
 // 9. typeof
-typeof undefined; // "undefined"
-typeof true; // "boolean"
-typeof 1337; // "number"
-typeof "foo"; // "string"
-typeof {}; // "object"
-typeof parseInt; // "function"
-typeof Symbol(); // "symbol"
+typeof undefined // "undefined"
+typeof true // "boolean"
+typeof 1337 // "number"
+typeof 'foo' // "string"
+typeof {} // "object"
+typeof parseInt // "function"
+typeof Symbol() // "symbol"
 typeof 127n // "bigint"
 
 // 10.块级类型声明
 if (true) {
-    type T = number;
-    let v: T = 5;
-    console.log(v);
-
+  type T = number
+  let v: T = 5
+  console.log(v)
 } else {
-    type T = string;
-    let v: T = 'hello';
-    console.log(v);
-
+  type T = string
+  let v: T = 'hello'
+  console.log(v)
 }
 // 11. 类型兼容：凡是可以使用父类型的地方，都可以使用子类型，但是反过来不行
 </script>
-<template>
-
-</template>
+<template></template>

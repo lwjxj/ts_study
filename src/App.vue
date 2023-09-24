@@ -5,6 +5,7 @@ import TypeSystem from './components/03_类型系统.vue'
 import ArrayType from './components/04_数组.vue'
 import TupleType from './components/05_元祖.vue'
 import Symbol from './components/06_symbol.vue'
+import FunctionType from './components/07_函数.vue'
 </script>
 
 <template>
@@ -14,8 +15,7 @@ import Symbol from './components/06_symbol.vue'
   <ArrayType />
   <TupleType />
   <Symbol />
+  <FunctionType />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
