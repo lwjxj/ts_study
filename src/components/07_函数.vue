@@ -184,7 +184,48 @@ const a: 0 | 1 = fn2('hi')
 // 对象的方法也可以使用重载
 class StringBuilder {
   #data = ''
+  add(num: number): this
+  add(bool: boolean): this
+  add(str: string): this
+  add(value: any): this {
+    this.#data += String(value)
+    return this
+  }
+  toString() {
+    return this.#data
+  }
+}
+
+// 精确描述函数参数与返回值之间的对应关系
+function createElement(tag: 'a'): HTMLAnchorElement
+function createElement(tag: 'canvas'): HTMLCanvasElement
+function createElement(tag: 'table'): HTMLTableElement
+function createElement(tag: string): HTMLElement {
+  console.log(tag);
+}
+
+// 优先使用联合类型来替代函数重载
+function len(x: any[] | string): number {
+  return x.length
+}
+
+// 构造函数
+const d = new Date()
+
+class Animal {
+  numLegs: number = 4
+}
+
+type AnimalConstructor = new () => Animal
+
+function create(c: AnimalConstructor): Animal {
+  return new c()
+}
+
+const a1 = create(Animal)
+
+type F = {
+  new(s: string): object;
+  (n?: number): number;
 }
 </script>
-
-<template></template>
