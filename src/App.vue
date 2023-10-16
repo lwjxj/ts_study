@@ -6,6 +6,7 @@ import ArrayType from './components/04_数组.vue'
 import TupleType from './components/05_元祖.vue'
 import Symbol from './components/06_symbol.vue'
 import FunctionType from './components/07_函数.vue'
+import ObjectType from './components/08_对象.vue'
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import FunctionType from './components/07_函数.vue'
   <TupleType />
   <Symbol />
   <FunctionType />
+  <ObjectType />
 </template>
 
 <style scoped></style>
