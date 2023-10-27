@@ -114,7 +114,34 @@ const arr: MyArr = [1, 2, 3]
 
 // 结构赋值
 const product = {
-
+    id: 1,
+    name: 'zs',
+    price: 1000
 }
-const { }: {} = product
+const { id, name, price }: { id: number, name: string, price: number } = product
+
+// let { x: foo, y: bar } = obj
+// 上面示例中，冒号不是表示属性x和y的类型，而是为这两个属性指定新的变量名。如果要为x和y指定类型，不得不写成下面这样。
+let { x: foo, y: bar }: { x: number, y: number } = obj
+
+function draw({
+    shape: Shape,
+    xPos: number = 100
+}) {
+    console.log(Shape, number);
+}
+const drawObj = {
+    shape: 100,
+    xPos: 100
+}
+draw(drawObj)
+// 上面示例中，函数draw()的参数是一个对象解构，里面的冒号很像是为变量指定类型，其实是为对应的属性指定新的变量名。
+// 所以，TypeScript 就会解读成，函数体内不存在变量shape，而是属性shape的值被赋值给了变量Shape。
+
+// 结构类型原则
+// 对象B满足对象A的结构特征（包含对象A的类型），TS就称对象B兼容对象A的类型
+type A = { x: number }
+type B = { x: number, y: number }
+const B1: B = { x: 1, y: 1 }
+const A1: A = B1
 </script>
