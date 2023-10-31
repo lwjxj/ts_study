@@ -144,4 +144,82 @@ type A = { x: number }
 type B = { x: number, y: number }
 const B1: B = { x: 1, y: 1 }
 const A1: A = B1
+
+type myObj = {
+    x: number
+    y: number
+}
+function getSum(obj: myObj) {
+    let sum = 0
+    for (const n of Object.keys(obj)) {
+        const v = obj[n]
+        sum += Math.abs(v)
+    }
+}
+// 上面示例中，函数getSum()要求传入参数的类型是myObj，但是实际上所有与myObj兼容的对象都可以传入。
+// 这会导致const v = obj[n]这一行报错，原因是obj[n]取出的属性值不一定是数值（number），使得变量v的类型被推断为any。
+// 如果项目设置为不允许变量类型推断为any，代码就会报错。
+function getSum2(obj: myObj) {
+    return Math.abs(obj.x) + Math.abs(obj.y)
+}
+
+// 严格字面量检查
+const point: {
+    x: number
+    y: number
+} = {
+    x: 1,
+    y: 1,
+    z: 1
+}
+// TypeScript 对字面量进行严格检查的目的，主要是防止拼写错误。一般来说，字面量大多数来自手写，容易出现拼写错误，或者误用 API
+const myPoint = {
+    x: 1,
+    y: 1,
+    z: 1
+}
+const point2: {
+    x: number
+    y: number
+} = myPoint
+
+type Options = {
+    title: string
+    darkMode?: boolean
+}
+const obj3: Options = {
+    title: 'cs',
+    darkmode: true
+}
+const myOptions = {
+    title: 'cs',
+    darkmode: true
+}
+const obj4: Options = myOptions
+// 可以使用中间变量来规避严格字面量检查
+
+// 对象定义通用属性
+let x: {
+    foo: number
+    [x: string]: any
+}
+x = { foo: 1, bar: 2 }
+
+// 最小可选属性规则
+type Options2 = {
+    a?: number
+    b?: number
+}
+const opts = { d: 123, a: 1 }
+const obj5: Options2 = opts
+// 报错原因是，如果某个类型的所有属性都是可选的，那么该类型的对象必须至少存在一个可选属性，不能所有可选属性都不存在。这就叫做“最小可选属性规则”
+
+// 空对象
+const obj6 = {}
+obj6.name = 'zs'
+// 空对象没有自定义属性，所以对自定义属性赋值就会报错。空对象只能使用继承的属性，即继承自原型对象Object.prototype的属性。
+obj6.toString()
+const obj7: {} = { myProp: 1 }
+obj7.myProp
+// 因为Object可以接受各种类型的值，而空对象是Object类型的简写，所以它不会有严格字面量检查，赋值时总是允许多余的属性，只是不能读取这些属性
 </script>
