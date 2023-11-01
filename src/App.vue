@@ -7,6 +7,7 @@ import TupleType from './components/05_元祖.vue'
 import Symbol from './components/06_symbol.vue'
 import FunctionType from './components/07_函数.vue'
 import ObjectType from './components/08_对象.vue'
+import Interface from './components/09_接口.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import ObjectType from './components/08_对象.vue'
   <Symbol />
   <FunctionType />
   <ObjectType />
+  <Interface />
 </template>
 
 <style scoped></style>
