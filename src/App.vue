@@ -8,6 +8,7 @@ import Symbol from './components/06_symbol.vue'
 import FunctionType from './components/07_函数.vue'
 import ObjectType from './components/08_对象.vue'
 import Interface from './components/09_接口.vue'
+import ClassType from './components/10_class类型.vue'
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import Interface from './components/09_接口.vue'
   <FunctionType />
   <ObjectType />
   <Interface />
+  <ClassType />
 </template>
 
 <style scoped></style>
