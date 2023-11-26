@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 // 接口：看作一种类型约定
 interface Person {
   firstName: string

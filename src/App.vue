@@ -9,6 +9,7 @@ import FunctionType from './components/07_函数.vue'
 import ObjectType from './components/08_对象.vue'
 import Interface from './components/09_接口.vue'
 import ClassType from './components/10_class类型.vue'
+import Genericity from './components/11_泛型.vue'
 </script>
 
 <template>
@@ -22,6 +23,7 @@ import ClassType from './components/10_class类型.vue'
   <ObjectType />
   <Interface />
   <ClassType />
+  <Genericity />
 </template>
 
 <style scoped></style>
