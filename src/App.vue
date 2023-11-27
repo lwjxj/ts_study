@@ -10,6 +10,7 @@ import ObjectType from './components/08_对象.vue'
 import Interface from './components/09_接口.vue'
 import ClassType from './components/10_class类型.vue'
 import Genericity from './components/11_泛型.vue'
+import Enum from './components/12_Enum.vue'
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import Genericity from './components/11_泛型.vue'
   <Interface />
   <ClassType />
   <Genericity />
+  <Enum />
 </template>
 
 <style scoped></style>
