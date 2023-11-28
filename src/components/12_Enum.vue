@@ -29,7 +29,31 @@ const enum Test {
   Green,
   Blue,
 }
-const x = Color.Blue
-// => const x1 = 2
+const x = Color.Red;
+const y = Color.Green;
+const z = Color.Blue;
+
+// 编译后
+// const x = 0 /* Color.Red */;
+// const y = 1 /* Color.Green */;
+// const z = 2 /* Color.Blue */;
 // 加上const的好处是成员会被替换为对应的值，这样能提高性能表现
+
+// 字符串Enum
+enum Direction {
+  Up = 'UP',
+  Down = 'DOWN',
+  Left = 'LEFT',
+  Right = 'RIGHT',
+}
+
+// keyof运算符：取出Enum结构的所有成员名，作为联合类型返回
+enum MyEnum {
+  A = 'a',
+  B = 'b'
+}
+
+// 'A'|'B'
+type Foo2 = keyof typeof MyEnum;
+// 注意，这里的typeof是必需的，否则keyof MyEnum相当于keyof string
 </script>
