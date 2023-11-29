@@ -56,4 +56,27 @@ enum MyEnum {
 // 'A'|'B'
 type Foo2 = keyof typeof MyEnum;
 // 注意，这里的typeof是必需的，否则keyof MyEnum相当于keyof string
+
+enum MyEnum2 {
+  A = 'a',
+  B = 'b'
+}
+type Foo3 = { [key in MyEnum2]: any }
+
+// 反向映射（通过成员值获得成员名）
+enum Weekdays {
+  Monday = 1,
+  Tuesday,
+  Wednesday
+}
+// 编译后：Weekdays[Weekdays["Monday"] = 1] = "Monday";
+console.log(Weekdays[2]);
+enum Weekdays2 {
+  Monday = 'M',
+  Tuesday = 'T',
+  Wednesday = 'W'
+}
+// console.log(Weekdays2['W']);
+// 编译后：Weekdays["Monday"] = "M";
+// 注意，这种情况只发生在数值 Enum，对于字符串 Enum，不存在反向映射。这是因为字符串 Enum 编译后只有一组赋值
 </script>

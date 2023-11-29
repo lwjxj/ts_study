@@ -185,7 +185,7 @@ interface Rectangle {
     area: number
 }
 declare const s: Circle | Rectangle
-s.area
+// s.area
 
 // interface 与 type首先表现在都能为对象类型起名的异同
 // 1.相同之处
