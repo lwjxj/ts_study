@@ -32,4 +32,57 @@ const s3: number = s2 as unknown as number
 // 也可以断言为一个更加精确的类型（子类型），但不能断言为一个完全无关的类型
 // 但是，如果真的要断言成一个完全无关的类型，也是可以做到的。那就是连续进行两次类型断言，先断言成 unknown 类型或 any 类型，然后再断言为目标类型。
 // 因为any类型和unknown类型是所有其他类型的父类型，所以可以作为两种完全无关的类型的中介
+
+// as const断言
+let s4 = 's4' // string
+const s5 = 's5' // s5
+
+// const s = 'JavaScript';
+let s = 'JavaScript' as const
+type Lang =
+    | 'JavaScript'
+    | 'TypeScript'
+    | 'Python';
+function setLang(lang: Lang) {
+    console.log(lang);
+}
+setLang(s)
+
+const v1 = {
+    x: 1,
+    y: 2
+}
+
+const v2 = {
+    x: 1 as const,
+    y: 2
+}
+
+const v3 = {
+    x: 1,
+    y: 2
+} as const
+
+function add(x: number, y: number) {
+    return x + y
+}
+const nums = [1, 2] as const
+add(...nums)
+
+enum Foo {
+    X,
+    Y
+}
+let e1 = Foo.X
+let e2 = Foo.X as const
+
+// 非空断言 !
+
+// 断言函数
+const assertIsNumber = (
+  value:unknown
+):asserts value is number => {
+  if (typeof value !== 'number')
+    throw Error('Not a number');
+};
 </script>
