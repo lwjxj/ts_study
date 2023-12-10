@@ -12,6 +12,7 @@ import ClassType from './components/10_class类型.vue'
 import Genericity from './components/11_泛型.vue'
 import Enum from './components/12_Enum.vue'
 import TypeAssertion from './components/13_类型断言.vue'
+import NameSpace from './components/15_命名空间.vue'
 </script>
 
 <template>
@@ -28,6 +29,7 @@ import TypeAssertion from './components/13_类型断言.vue'
   <Genericity />
   <Enum />
   <TypeAssertion />
+  <NameSpace />
 </template>
 
 <style scoped></style>
