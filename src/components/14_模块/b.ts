@@ -30,3 +30,11 @@ let foo: Bool = true
 // 非相对模块指的是不带有路径信息的模块
 // import * as $ from "jquery";
 // import { Component } from "@angular/core"
+
+// Classic 方法
+// Node方法
+// 路径映射
+// (1)baseUrl (2)paths (3)rootDirs
+// --traceResolution
+// --noResolve
+// importsNotUsedAsValues
