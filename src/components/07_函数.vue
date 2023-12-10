@@ -134,7 +134,7 @@ function sometimesThrow(): number {
   }
   throw new Error('error')
 }
-const result = sometimesThrow()
+// const result = sometimesThrow()
 
 // 局部类型:只在函数内部有效
 function helloWorld(txt: string) {

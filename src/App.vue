@@ -13,6 +13,7 @@ import Genericity from './components/11_泛型.vue'
 import Enum from './components/12_Enum.vue'
 import TypeAssertion from './components/13_类型断言.vue'
 import NameSpace from './components/15_命名空间.vue'
+import Decorator from './components/16_装饰器.vue'
 </script>
 
 <template>
@@ -30,6 +31,7 @@ import NameSpace from './components/15_命名空间.vue'
   <Enum />
   <TypeAssertion />
   <NameSpace />
+  <Decorator />
 </template>
 
 <style scoped></style>

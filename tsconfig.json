@@ -26,7 +26,8 @@
     "paths": {
       "jquery": ["node_modules/jquery/dist/jquery"]
     },
-    "rootDirs": ["src/zh","src/de","src/#{locale}"]
+    "rootDirs": ["src/zh","src/de","src/#{locale}"],
+    "experimentalDecorators": true,
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
