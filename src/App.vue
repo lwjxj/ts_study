@@ -14,6 +14,7 @@ import Enum from './components/12_Enum.vue'
 import TypeAssertion from './components/13_类型断言.vue'
 import NameSpace from './components/15_命名空间.vue'
 import Decorator from './components/16_装饰器.vue'
+import Declare from './components/17_declare关键字.vue'
 </script>
 
 <template>
@@ -32,6 +33,7 @@ import Decorator from './components/16_装饰器.vue'
   <TypeAssertion />
   <NameSpace />
   <Decorator />
+  <Declare />
 </template>
 
 <style scoped></style>
