@@ -52,6 +52,50 @@ declare module AnimalLib2 {
         sleep(): void
     }
     type Animals = 'Fish' | 'Dog'
-    export function readFile(filename: string):string
+    export function readFile(filename: string): string
 }
+
+
+// 引用外部库
+declare namespace myLib {
+    function makeGreeting(s: string): string
+    let numberOfGreetings: number
+}
+let result = myLib.makeGreeting('hello')
+let count = myLib.numberOfGreetings
+
+// declare 关键字的另一个用途，是为外部模块添加属性和方法时，给出新增部分的类型描述
+// import { Foo as Bar } from 'moduleA';
+// declare module 'moduleA' {
+//   interface Bar extends Foo {
+//     custom: {
+//       prop1: string;
+//     }
+//   }
+// }
+
+// declare global
+// 为 JavaScript 引擎的原生对象添加属性和方法
+export { };
+
+declare global {
+    interface String {
+        toSmallString(): string;
+    }
+}
+
+String.prototype.toSmallString = (): string => {
+    // 具体实现
+    return '';
+};
+
+declare global {
+    interface Window {
+        myAppConfig: object;
+    }
+}
+
+const config = window.myAppConfig;
+
+// declare enum
 </script>
