@@ -78,7 +78,7 @@ console.log(x10)
 // 6.联合类型
 let c1: string | number = 123
 console.log(c1)
-// 6.1 使用联合类型，需要对类型进行收窄
+// 使用联合类型，需要对类型进行收窄
 
 // 7.交叉类型
 let c2: string & number
