@@ -7,7 +7,7 @@ console.log(x)
 // y = x
 
 // 1.2 类型推断问题
-function add(x: number, y: number) {
+function add(x, y) {
   return x + y
 }
 let x1
@@ -17,7 +17,7 @@ add(1, 2)
 let x2: any = 'zs'
 let y2: number
 y2 = x2
-console.log(y2)
+console.log(y2 * 10)
 // y2.toFixed(2)
 
 // 2.unknown
